@@ -20,7 +20,7 @@ public class Height {
          */
 
         //은주 코드
-        Scanner sc = new Scanner(System.in);
+        /*Scanner sc = new Scanner(System.in);
 
         int cm; //163cm
         int feet;   //1feet = 12inch
@@ -33,6 +33,18 @@ public class Height {
         inch = inch - feet * 12;
 
         System.out.println(cm + "cm는 " + feet + "피트"
+                + inch + "인치 입니다.");*/
+
+        //정현 코드
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("키를 입력해주세요 : ");
+        int height = s.nextInt();
+
+        int feet = (int) ((int)height/(12*2.54));
+        double inch = (height - (12*2.54*feet))/2.54;
+
+        System.out.println(height + "cm는 " + feet + "피트"
                 + inch + "인치 입니다.");
 
     }
