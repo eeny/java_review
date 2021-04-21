@@ -21,13 +21,11 @@ public class Salary {
         if(salse >= 10){
             bonus = (int)(salary*0.1);
             money = salary + bonus;
-            System.out.println("이번달 월급은 판매량 10을 넘었으므로 기본급 "+ salary
-                    + "만원 + 보너스 " + bonus + "만원 = " + money + "만원 입니다.");
+            System.out.println("이번달 월급은 판매량 10을 넘었으므로 기본급 "+ salary + "만원 + 보너스 " + bonus + "만원 = " + money + "만원 입니다.");
         }else if(salse >= 5){
             bonus = (int)(salary*0.05);
             money = salary + bonus;
-            System.out.println("이번달 월급은 판매량 5를 넘었으므로 기본급 "+ salary
-                    + "만원 + 보너스 " + bonus + "만원 = " + money + "만원 입니다.");
+            System.out.println("이번달 월급은 판매량 5를 넘었으므로 기본급 "+ salary + "만원 + 보너스 " + bonus + "만원 = " + money + "만원 입니다.");
         }else{
             System.out.println("보너스가 없습니다!!! 이번달 월급은 " + salary + "만원 입니다.");
         }

@@ -32,17 +32,17 @@ public class PartTimeJob {
             //내가 생각한 답은 괄호가 있어서 형변환을 해야한다
             //bonus = (((time * week)*8)/40)*wage; //은주가 알려준 답(다 곱하고 나누기를 나중에 하는 방법)
             bonus = wage * 8 * week * time / 40; //정현이가 알려준 답(괄호를 빼도 되는 연산이라서)
+
             salary = (month * time * wage) + bonus;
 
-            System.out.println("주휴수당은 " + bonus + "원 이고, 이번달 알바비는 "
-                    + salary + "원입니다.");
+            System.out.println("주휴수당은 " + bonus + "원 이고, 이번달 알바비는 " + salary + "원입니다.");
 
         }else{//주휴수당 못 받는 경우
             bonus = 0;
+
             salary = month * time * wage;
 
-            System.out.println("주15시간 미만 근무, 주휴수당은 " + bonus + "원 이고, 이번달 알바비는 "
-                    + salary + "원입니다.");
+            System.out.println("주15시간 미만 근무, 주휴수당은 " + bonus + "원 이고, 이번달 알바비는 " + salary + "원입니다.");
         }
     }
 }

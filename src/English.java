@@ -11,6 +11,7 @@ public class English {
         System.out.print("알파벳 1개 입력 : ");
         a = sc.next().charAt(0);//문자열에서 첫번째 문자 꺼내오기
         //Scanner는 문자를 입력받는 기능이 없다!
+        //next()로 문자열을 받아서, charAt(0) 첫번째 문자를 꺼낸다!
 
         if(a == 'a'){
             System.out.println("모음");

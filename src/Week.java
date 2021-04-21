@@ -12,7 +12,6 @@ public class Week {
 
         if(month == 1){
             System.out.println("January");
-
         }else if(month == 2){
             System.out.println("February");
         }
