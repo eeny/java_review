@@ -9,7 +9,7 @@ public class ArrayTest2{
                 x++;
                 arr[i][j] = x;
 
-                System.out.print("["+i+"]["+j+"]="+arr[i][j]+(arr[i][j]<10?"   ":" "));
+                System.out.print("["+i+"]["+j+"]="+arr[i][j]+(arr[i][j]<10?" ":" "));
             }
             System.out.println();//10개씩 보기 좋게 출력하려고~~
         }
