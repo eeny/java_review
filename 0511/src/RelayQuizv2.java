@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class RelayQuizv2 extends JFrame implements ActionListener, KeyListener {
+public class RelayQuizv2 extends JFrame implements KeyListener {
     JLabel direction, blb;
     int x;//문제 넘길 때 쓰는 변수. 초기값 0
     int msg;//정답 알림창
@@ -28,11 +28,6 @@ public class RelayQuizv2 extends JFrame implements ActionListener, KeyListener {
         this.add(direction, "North");
         this.add(blb);
         this.setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 
     void nextQuestion() {//다음 문제 넘기는 메서드
