@@ -42,6 +42,11 @@ public class RelayQuiz extends JFrame implements ActionListener, KeyListener {
         ++x;//x를 1로
         blb.setText(str[x]);
 
+        if (x==(str.length-1)) {//마지막 문제에서 끝내기
+            btn.setText("문제 끝");
+            btn.setEnabled(false);
+        }
+
         this.addKeyListener(this);
         this.requestFocus();
         this.setFocusable(true);
@@ -54,22 +59,15 @@ public class RelayQuiz extends JFrame implements ActionListener, KeyListener {
                 if (e.getKeyCode()==answer[i]) {//i번 답일 때
                     slb.setText("정답!");
                     slb.setForeground(Color.RED);
-
-                    if (i==(str.length - 1)) {//문제 개수 이상은 못 넘어가게
-                        btn.setText("문제 끝");
+                    if (i==(str.length-1)) {//마지막 문제에서 끝내기
                         btn.setEnabled(false);
                     } else {
-                        btn.setEnabled(true);//다음 문제 넘어가게
+                        btn.setEnabled(true);
                     }
                 } else {
                     slb.setText("땡!");
                     slb.setForeground(Color.BLUE);
-
-                    if (i==(str.length - 1)) {
-                        btn.setText("문제 끝");
-                    } else {
-                        btn.setEnabled(false);//다음 문제 못 넘어가게
-                    }
+                    btn.setEnabled(false);
                 }
             }
         }
