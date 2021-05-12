@@ -35,7 +35,7 @@ public class RelayQuizv2 extends JFrame implements KeyListener {
         blb.setText(str[x]);
     }
 
-    void lastQuestion() {//마지막 문제 후 점수 확인 메서드
+    void lastQuestion() {//마지막 문제 후 점수 화면 출력 메서드
         direction.setText("");
         blb.setText("수고하셨습니다! 점수는 " + score + "점입니다.");
         msg = JOptionPane.showConfirmDialog(this, "종료하시겠습니까?");
@@ -48,7 +48,7 @@ public class RelayQuizv2 extends JFrame implements KeyListener {
     public void keyPressed(KeyEvent e) {
         String[] next = {"다음문제"};
 
-        for (int i = 0; i < (str.length+1); i++) {
+        for (int i = 0; i < (str.length+1); i++) {//마지막에 점수 화면 출력을 위해 str.length 보다 한 번 더 반복한다!
 
             if (blb.getText().equals(str[i])) {//i번 문제일 때
                 if (e.getKeyCode()==answer[i]) {//i번 답일 때
