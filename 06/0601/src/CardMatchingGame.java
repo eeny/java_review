@@ -55,24 +55,28 @@ public class CardMatchingGame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JButton fstBtn;// 첫번째 버튼
-        JButton scdBtn;// 두번째 버튼
-        boolean isFirst = false;// 첫번째 버튼을 선택했는가?
+        JButton fstBtn = null;// 첫번째 버튼
+        JButton scdBtn = null;// 두번째 버튼
+        boolean isFirst = false;// 첫번째 버튼을 선택했는지 여부
 
-        JButton b = (JButton) e.getSource();// 내가 선택한 버튼
-
-        if(!isFirst){
+        if(!isFirst) {// 첫번째 버튼을 선택한 경우
+            JButton b = (JButton) e.getSource();// 내가 선택한 버튼
             fstBtn = b;
             isFirst = true;
+            System.out.println("첫번재 버튼 : " + fstBtn.getText());
 
-        }else{
-            scdBtn = b;
-            isFirst = false;
+            if (fstBtn != null) {
+                JButton b2 = (JButton) e.getSource();// 내가 선택한 버튼
+                scdBtn = b2;
+                isFirst = false;
+                System.out.println("두번째 버튼 : " + scdBtn.getText());
 
-            //두개 비교
+                // 두 개 비교
 
+            }
+
+        } else {// 첫번째 버튼을 선택하지 않은 경우
+            System.out.println("선택한 버튼 없음!");
         }
-
-
     }
 }
