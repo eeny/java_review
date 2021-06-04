@@ -8,7 +8,7 @@ import java.util.Set;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class TestMoveBox46 extends JFrame implements KeyListener {
+public class CombineMoveBox46 extends JFrame implements KeyListener {
     JButton btnHero;
 
     int x = 10;
@@ -20,7 +20,7 @@ public class TestMoveBox46 extends JFrame implements KeyListener {
     int kx, ky;
     private final Set<Integer> pressedKeys = new HashSet<>();
 
-    public TestMoveBox46() {
+    public CombineMoveBox46() {
         this.setDefaultCloseOperation(3);
         this.setSize(500, 500);
         this.setLayout(null);
@@ -50,6 +50,12 @@ public class TestMoveBox46 extends JFrame implements KeyListener {
         kx = btnHero.getX();
         ky = btnHero.getY();
 
+        ThreadLabel lbl = new ThreadLabel();
+        this.add(lbl);
+        new Thread(lbl).start();
+
+        this.setVisible(true);
+
         this.setVisible(true);
     }
 
@@ -59,7 +65,7 @@ public class TestMoveBox46 extends JFrame implements KeyListener {
     }
 
     public static void main(String[] args) {
-        new TestMoveBox46();
+        new CombineMoveBox46();
     }
 
     @Override
