@@ -23,7 +23,7 @@ class Job implements Runnable {
     }
 }
 
-public class Test {// p609 Exercise 4번문제
+public class Test3 {// p609 Exercise 4번문제
 //	@Override
 //	public void run() {
 //		byte n = 0;
