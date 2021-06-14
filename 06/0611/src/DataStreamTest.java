@@ -21,9 +21,9 @@ public class DataStreamTest {// 633 예제
             out.flush();
             in = new DataInputStream(new BufferedInputStream(new FileInputStream("data.bin")));
 
-            System.out.println(in.readUTF());
-            System.out.println(in.readInt());
             System.out.println(in.readDouble());
+            System.out.println(in.readInt());
+            System.out.println(in.readUTF());
             // 넣은 순서대로 double, int, utf 순서가 아니면 에러가 발생한다!
             // 넣은 순서 그대로 read를 해야 제대로 출력이 된다!
 

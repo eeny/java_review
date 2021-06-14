@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class FileTest {// p638 예제
     public static void main(String[] args) throws IOException {
-        String name = "D:/eclipse";// 내 이클립스 폴더 위치
+        String name = "C:\\Users\\pc\\eclipse";// 내 이클립스 폴더 위치
         File dir = new File(name);
         String[] fileNames = dir.list();
 

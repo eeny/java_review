@@ -12,8 +12,6 @@ public class ObjectStreamTest {// p636예제
         ObjectOutputStream out = null;
 
         try {
-            int c;
-
             out = new ObjectOutputStream(new FileOutputStream("object.dat"));
             out.writeObject(new Date());
 

@@ -1,10 +1,10 @@
 import java.util.HashMap;
 
-class Student2 {// 예시 2
+class Student5 {// 예시 2
     String name;
     int age;
 
-    public Student2(String name, int age) {
+    public Student5(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -28,16 +28,16 @@ public class HashMapEx {
         System.out.println(map.get("이름"));// 짱보리
 
         // 예시 2
-        HashMap<String, Student2> map2 = new HashMap<>();
-        Student2 st1 = new Student2("짱제니", 1);
-        Student2 st2 = new Student2("댕댕이", 2);
-        Student2 st3 = new Student2("냥냥이", 3);
+        HashMap<String, Student5> map2 = new HashMap<>();
+        Student5 st1 = new Student5("짱제니", 1);
+        Student5 st2 = new Student5("댕댕이", 2);
+        Student5 st3 = new Student5("냥냥이", 3);
 
         map2.put("202001", st1);
         map2.put("202002", st2);
         map2.put("202003", st3);
 
-        Student2 ss = map2.get("202001");// 만들어진 new Student("짱제니", 1);를 가져온다.
+        Student5 ss = map2.get("202001");// 만들어진 new Student("짱제니", 1);를 가져온다.
         // get으로 가져온 객체의 타입은? st1을 가져오므로 Student타입!
 
         System.out.println(ss.age);

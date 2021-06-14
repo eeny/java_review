@@ -13,12 +13,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-class Student implements Serializable {
+class Student3 implements Serializable {
     int id;// 학번
     String name;// 이름
     String major;// 전공
 
-    public Student(int id, String name, String major) {
+    public Student3(int id, String name, String major) {
         this.id = id;
         this.name = name;
         this.major = major;
@@ -63,12 +63,12 @@ public class StudentDatEx extends JFrame implements ActionListener {
 
         try {
             out = new ObjectOutputStream(new FileOutputStream("student.dat"));
-            out.writeObject(new Student(id, name, major));
+            out.writeObject(new Student3(id, name, major));
 
             out.flush();
 
             in = new ObjectInputStream(new FileInputStream("student.dat"));
-            Student st = (Student) in.readObject();
+            Student3 st = (Student3) in.readObject();
             System.out.println(st);
 
         } catch (FileNotFoundException e1) {

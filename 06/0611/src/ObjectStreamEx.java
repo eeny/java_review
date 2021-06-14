@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -18,13 +17,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class ObjectStreamEx extends JFrame implements ActionListener {
-    File file = new File("student2.dat");// 파일 미리 만들기
+    File file = new File("student4.dat");// 파일 미리 만들기
     JTextField tfNum, tfName, tfMajor;
     JButton btnIn;
     JPanel southPnl;
     ObjectOutputStream out;// 액션에서 쓰려고 미리 전역으로 빼뒀다!
-    HashMap<String, Student2> stdMap;// 학생이 담길 맵
-    HashMap<String, Student2> res;// 처음에 읽어올 파일이 담길 맵
+    HashMap<String, Student4> stdMap;// 학생이 담길 맵
+    HashMap<String, Student4> res;// 처음에 읽어올 파일이 담길 맵
 
     // ===== 따로 만든 변수 =====
     ObjectInputStream in;
@@ -81,7 +80,7 @@ public class ObjectStreamEx extends JFrame implements ActionListener {
             e.printStackTrace();
         }
 
-        Student2 std = new Student2(tfNum.getText(), tfName.getText(), tfMajor.getText());
+        Student4 std = new Student4(tfNum.getText(), tfName.getText(), tfMajor.getText());
         // 학번(KEY)으로 학번/이름/학과 정보(VALUE)를 다 들고 올거다!
         stdMap.put(tfNum.getText(), std);
 
@@ -110,10 +109,10 @@ public class ObjectStreamEx extends JFrame implements ActionListener {
             in = new ObjectInputStream(new FileInputStream(file));// 파일 읽기 준비
             // 위에서 맵을 넣었으니까 맵으로 가져와야 한다!
             // read로 파일의 객체를 읽어옴
-            res = (HashMap<String, Student2>) in.readObject();
+            res = (HashMap<String, Student4>) in.readObject();
 
             if (x == 1) {// 이 부분은 필요할 수도 있고 아닐 수도 있으므로
-                Student2 s = res.get(tfFind.getText());
+                Student4 s = res.get(tfFind.getText());
 
                 centerLbl.setText(s.toString());
                 // s + "" 으로 출력해도 된다!
@@ -156,12 +155,12 @@ public class ObjectStreamEx extends JFrame implements ActionListener {
 
 }
 
-class Student2 implements Serializable {// 동기화 - 네트워크 때 설명
+class Student4 implements Serializable {// 동기화 - 네트워크 때 설명
     String num;
     String name;
     String major;
 
-    public Student2(String num, String name, String major) {
+    public Student4(String num, String name, String major) {
         this.num = num;
         this.name = name;
         this.major = major;
