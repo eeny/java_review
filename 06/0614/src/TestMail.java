@@ -1,3 +1,4 @@
+/*
 import java.awt.BorderLayout;
 import java.awt.event.*;
 import javax.swing.*;
@@ -115,4 +116,4 @@ public class TestMail extends JFrame implements ActionListener {
         new TestMail();
     }
 
-}
+}*/
